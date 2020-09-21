@@ -32,7 +32,7 @@ app.post("/charge", (req, res) => {
         description: "Web Development Ebook",
         currency: 'usd',
         customer: customer.id
-    })).then(charge => res.render("success"))
+    })).then(charge => res.render("success")).catch(console.log)
 })
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
